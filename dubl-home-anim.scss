@@ -40,15 +40,15 @@
 }
 
 .header {
+  &.done {
+    background: #fff;
 
-  background: #fff;
-
-  .header-cont {
-    transform: translate(0, 0);
-    transition: transform 0.5s ease;
-    transition-delay: 0.2s;
+    .header-cont {
+      transform: translate(0, 0);
+      transition: transform 0.5s ease;
+      transition-delay: 0.2s;
+    }
   }
-
 }
 
 .hidden-header {
@@ -121,15 +121,15 @@
     transition: transform 0.6s ease-out;
   }
 
+  &.done {
+    opacity: 1;
 
-  opacity: 1;
+    img {
+      transform: translate(0, -50%);
+      transition-delay: 0.6s;
+    }
 
-  img {
-    transform: translate(0, -50%);
-    transition-delay: 0.6s;
   }
-
-
 }
 
 .hero-anims {
@@ -220,37 +220,62 @@
 }
 
 .hero-anims {
-
-
   .hero-line {
-    opacity: 1;
+    transition: opacity 0.9s ease !important;
 
-    .word {
-      opacity: 1;
+    &:nth-child(1) {
+      transition-delay: 0.2s !important;
     }
 
-    .im {
-      width: 17.4691vw;
-      opacity: 1;
-      transition-delay: 0.7s;
-      margin-right: 1.3580vw;
-
-      img {
-        opacity: 1;
-        transition-delay: 1.3s;
-      }
+    &:nth-child(2) {
+      transition-delay: 0.4s !important;
     }
 
     &:nth-child(3) {
-      .im {
-        transition-delay: 1.2s;
-        margin-right: 0;
-        margin-left: 1.3580vw;
+      transition-delay: 0.6s !important;
+    }
+  }
 
-        img {
-          transition-delay: 1.5s;
+  &.anim {
+    .hero-line {
+      opacity: 0;
+    }
+
+    &.done {
+      opacity: 1;
+
+      .hero-line {
+        opacity: 1;
+
+        .word {
+          opacity: 1;
+        }
+
+        .im {
+          width: 17.4691vw;
+          opacity: 1;
+          transition-delay: 0.7s;
+          margin-right: 1.3580vw;
+
+          img {
+            opacity: 1;
+            transition-delay: 1.3s;
+          }
+        }
+
+        &:nth-child(3) {
+          .im {
+            transition-delay: 1.2s;
+            margin-right: 0;
+            margin-left: 1.3580vw;
+
+            img {
+              transition-delay: 1.5s;
+            }
+          }
         }
       }
+
     }
   }
 }
@@ -374,29 +399,29 @@
       }
     }
 
+    &.done {
+      opacity: 1;
 
-    opacity: 1;
+      .sg {
+        &:nth-child(2) {
+          transform: translate(0, 0);
+          transition: transform 0.3s linear;
+          transition-delay: 0.2s;
+        }
 
-    .sg {
-      &:nth-child(2) {
-        transform: translate(0, 0);
-        transition: transform 0.3s linear;
-        transition-delay: 0.2s;
-      }
+        &:nth-child(3) {
+          transform: translate(0, 0);
+          transition: transform 0.6s linear;
+          transition-delay: 0.2s;
+        }
 
-      &:nth-child(3) {
-        transform: translate(0, 0);
-        transition: transform 0.6s linear;
-        transition-delay: 0.2s;
-      }
-
-      &:nth-child(4) {
-        transform: translate(0, 0);
-        transition: transform 0.9s linear;
-        transition-delay: 0.2s;
+        &:nth-child(4) {
+          transform: translate(0, 0);
+          transition: transform 0.9s linear;
+          transition-delay: 0.2s;
+        }
       }
     }
-
   }
 }
 
@@ -628,7 +653,7 @@
   justify-content: flex-start;
   gap: 0.4321vw;
   height: 0;
-  transform: translate(0, -4.9465vw);
+  transform: translate(0, -4.8765vw);
 
   .tab-btn {
     background: #F1F6F8;
@@ -764,7 +789,7 @@
     a {
       font-style: normal;
       font-weight: 400;
-      font-size: 1.2346vw;
+      font-size: 20px;
       line-height: 110%;
       text-transform: uppercase;
       color: #5496B1;
@@ -1220,64 +1245,6 @@
   }
 }
 
-@media screen and (max-width: 2400px) and (min-width: 1025px) {
-  .header-cont .logo {
-    width: 15.4815vw;
-  }
-  .investors-conts .img {
-    width: 28.7778vw;
-    height: 42.5185vw;
-  }
-  .header-cont {
-    width: 100%;
-    padding-top: 1.8457vw;
-    padding-bottom: 1.8457vw;
-  }
-  .investors-conts .text blockquote {
-    font-size: 1.5vw;
-    line-height: 2.1vw;
-  }
-  .btn {
-    font-size: 2vw;
-  }
-  .investors-head a {
-    font-size: 2vw;
-  }
-  .companies__head .container .left span, .investors-head .txt span {
-    font-size: 0.8vw;
-    margin-bottom: 0.6vw;
-  }
-  .text-banner p {
-    font-size: 1.8vw;
-  }
-  .text-banner {
-    padding-top: 2.4vw;
-    padding-bottom: 2.4vw;
-  }
-  .company__cont .left h2, .companies__head .container .left h2, .investors-head .txt h2 {
-    font-size: 3.2vw;
-  }
-  .company__cont .text {
-    margin-top: 8vw;
-  }
-  .company__cont .text p {
-    font-size: 0.8vw;
-  }
-  .big-banner .txt img {
-    height: 5.6vw;
-  }
-  .big-banner .txt {
-    width: 40.5679vw;
-  }
-  .big-banner .txt p {
-    font-size: 1.4vw;
-  }
-  .big-banner {
-    height: 38vw;
-  }
-
-}
-
 @media screen and (max-width: 1024px) {
   .hero {
     height: 65.1042vw;
@@ -1485,24 +1452,9 @@
 }
 
 @media screen and (max-width: 767px) {
-  //
-  .companies-head__tabs {
-    transform: translate(0, -13.8889vw);
-  }
-  .companies-head__tabs .tab-btn {
-    width: calc(100% / 3);
-    height: 13.8889vw;
-    font-size: 3.0556vw;
-    line-height: 1.2;
-
-    &.active {
-      font-size: 4.1667vw;
-    }
-  }
-  //
   .companies__head {
     padding-top: 10vw;
-    padding-bottom: 22vw;
+    padding-bottom: 5vw;
   }
   .modal-window {
 
@@ -1711,7 +1663,7 @@
   .hero-line .im img {
     width: 24vw;
   }
-  .hero-anims .hero-line .im {
+  .hero-anims.anim.done .hero-line .im {
     width: 24vw;
   }
   .hero-line .im {
@@ -1951,49 +1903,9 @@
     align-items: flex-start;
     justify-content: flex-start;
 
-    .col {
-      width: 100%;
-      margin-bottom: 6.9444vw;
-      margin-right: 0;
-      padding-right: 0;
-    }
-
-    .col2 {
-      width: 100%;
-    }
-
     .text {
       width: 100%;
       padding: 0 5.5556vw 4.1667vw;
-      flex-direction: column;
-      align-items: flex-start;
-
-      a {
-        font-size: 5.5556vw;
-        line-height: 1.2;
-
-        &::after {
-          width: 8.8889vw;
-          margin-left: 4.1667vw;
-          height: 4.1667vw;
-        }
-      }
-
-      ul {
-        width: 100%;
-
-        li {
-          padding-left: 13.8889vw;
-          margin-bottom: 8.3333vw;
-          font-size: 3.3333vw;
-          line-height: 1.2;
-
-          &::before {
-            width: 9.4444vw;
-            height: 9.4444vw;
-          }
-        }
-      }
 
       span {
         font-size: 6.1111vw;

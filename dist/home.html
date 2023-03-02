@@ -15,10 +15,10 @@
     <link rel="stylesheet" href="./css/main.min.css">
 </head>
 <body class="home">
-    <div class="full-progress">
-        <p></p>
-    </div>
-<header class="header anim">
+<div class="full-progress">
+    <p></p>
+</div>
+<header class="header">
     <div class="container">
         <div class="header-cont">
             <div class="logo">
@@ -62,7 +62,7 @@
     <section class="hero page-section">
         <div class="container">
             <div class="hero-container">
-                <div class="hero-anims anim">
+                <div class="hero-anims ">
                     <div class="hero-line">
                         <div class="word">
                             <img src="./img/ht-1.svg" alt="">
@@ -86,50 +86,21 @@
 
                     </div>
                 </div>
-                <div class="hero-arrow anim">
+                <div class="hero-arrow ">
                     <img src="./img/hero-down.svg" alt="">
                 </div>
             </div>
 
         </div>
     </section>
-    <section class="big-banner page-section">
-        <div class="scrolled-img" data-inc="0.2">
-            <div class="img">
-                <img src="./img/big-banner.jpg" alt="">
-            </div>
-        </div>
 
-        <div class="txt">
-            <p class="anim" data-anim-delay="0" data-anim-duration="760"
-               data-anim="fade-down">investing for the future</p>
-            <img class="lazyload" data-src="./img/banner-logo.svg" alt="">
-        </div>
-        <div class="blocks anim">
-            <div class="sg">
-                <p>flexibility</p>
-            </div>
-            <div class="sg">
-                <p>innovation</p>
-            </div>
-            <div class="sg">
-                <p>hard work</p>
-            </div>
-            <div class="sg">
-                <p>integrity</p>
-            </div>
-        </div>
-
-    </section>
 
     <section class="company-created page-section" data-sec="1">
         <div class="container">
             <div class="company__cont">
                 <div class="left counting-delay">
-                    <span class="anim" data-anim-delay="0" data-anim-duration="960"
-                          data-anim="anim-stage">created and controlled in 2021 by Alexander and Anna  Varvarenko</span>
-                    <h2 class="anim" data-anim-delay="0" data-anim-duration="960"
-                        data-anim="anim-stage">Bluemont is a Belgian investment holding company</h2>
+                    <span >created and controlled in 2021 by Alexander and Anna  Varvarenko</span>
+                    <h2 >Bluemont is a Belgian investment holding company</h2>
 
                     <div class="scrolled-img" data-inc="-0.3">
                         <div class="img">
@@ -137,8 +108,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="text anim" data-anim-delay="0" data-anim-duration="960"
-                     data-anim="fade-up">
+                <div class="text">
                     <div class="img">
                         <img class="lazyload" data-src="./img/comp1.jpg" alt="">
                     </div>
@@ -163,7 +133,36 @@
             </div>
         </div>
     </section>
-    <div class="img-banner scrolled-img" data-inc="0.2">
+
+    <section class="big-banner page-section">
+        <div class="scrolled-img" data-inc="0.2">
+            <div class="img">
+                <img src="./img/big-banner.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="txt">
+            <p >investing for the future</p>
+            <img class="lazyload" data-src="./img/banner-logo.svg" alt="">
+        </div>
+        <div class="blocks ">
+            <div class="sg">
+                <p>flexibility</p>
+            </div>
+            <div class="sg">
+                <p>innovation</p>
+            </div>
+            <div class="sg">
+                <p>hard work</p>
+            </div>
+            <div class="sg">
+                <p>integrity</p>
+            </div>
+        </div>
+
+    </section>
+
+    <div class="img-banner scrolled-img" style="display: none" data-inc="0.2">
         <div class="img">
             <img class="lazyload" data-src="./img/big-img2.jpg" alt="">
 
@@ -174,21 +173,25 @@
         <div class="companies__head">
             <div class="container">
                 <div class="left counting-delay">
-                    <span class="anim" data-anim-delay="0" data-anim-duration="960"
-                          data-anim="anim-stage">Bluemont is always keen to increase its global market </span>
-                    <h2 class="anim" data-anim-delay="0" data-anim-duration="960"
-                        data-anim="anim-stage">Companies</h2>
+                    <span >Bluemont is always keen to increase its global market </span>
+                    <h2 >Companies</h2>
                 </div>
-                <p class="anim" data-anim-delay="0" data-anim-duration="960"
-                   data-anim="anim-stage">Wendel’s portfolio companies are leaders in their sectors of activity and innovation is always at the
+                <p >Wendel’s portfolio companies are leaders in their sectors of activity and
+                    innovation is always at the
                     heart of their development.</p>
             </div>
         </div>
         <div class="companies-list">
             <div class="container">
-                <div class="swiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide single-company">
+
+                <div class="companies-head__tabs">
+                    <div class="tab-btn active">Varamar</div>
+                    <div class="tab-btn">ship next</div>
+                    <div class="tab-btn">varamar trans</div>
+                </div>
+                <div class="tab-cont">
+                    <div class="item-tab active">
+                        <div class="single-company">
                             <div class="img">
                                 <img src="./img/sw1.jpg" alt="">
                                 <div class="log">
@@ -196,109 +199,130 @@
                                 </div>
                             </div>
                             <div class="text">
-                                <span>Varamar</span>
-                                <p>Varamar is a shipping company established back in 2009 by Alexander Varvarenko. </p>
+                                <div class="col">
+                                    <span>Varamar</span>
+                                    <p>Varamar is a shipping company established back in 2009 by Alexander
+                                        Varvarenko. </p>
 
-                                <p>Varamar is well known as a carrier dealing with breakbulk, heavy & oversized, and
-                                    dry-bulk cargo.  <br>
-                                    For over a decade, we have developed transport solutions for dismantled plants,
-                                    factories, wind turbines, bridges, vehicles and even stadiums. We have developed our
-                                    own methods based on in-house competences and provide a strong set-up for worldwide
-                                    shipments. <br>
-                                    We are also involved in tramp shipments of dry-bulk cargo and containers. </p>
-                                <p>Varamar offices are located in 9 countries — Germany, Italy, Athens, Ukraine, UAE,
-                                    Belgium, Canada, USA and China.</p>
-
-                                <p> We offer personalized approach, full package of services (document support, port
-                                    operations monitoring, engineers and supercargo counselling, etc.) and marketing
-                                    reporting / post-fix.
-                                </p>
-                            </div>
-
-                        </div>
-                        <div class="swiper-slide single-company">
-                            <div class="img">
-                                <img src="./img/sw1.jpg" alt="">
-                                <div class="log">
-                                    <img src="./img/logs1.svg" alt="">
+                                    <p> Varamar is well known as a carrier dealing with breakbulk, heavy & oversized,
+                                        and
+                                        dry-bulk cargo. <br>
+                                        For over a decade, we have developed transport solutions for dismantled plants,
+                                        factories, wind turbines, bridges, vehicles and even stadiums. We have developed
+                                        our
+                                        own
+                                        methods based on in-house competences and provide a strong set-up for worldwide
+                                        shipments. <br>
+                                        We are also involved in tramp shipments of dry-bulk cargo and containers.</p>
+                                    <a href="">website</a>
                                 </div>
-                            </div>
-                            <div class="text">
-                                <span>Varamar</span>
-                                <p>Varamar is a shipping company established back in 2009 by Alexander Varvarenko. </p>
-
-                                <p>Varamar is well known as a carrier dealing with breakbulk, heavy & oversized, and
-                                    dry-bulk cargo.  <br>
-                                    For over a decade, we have developed transport solutions for dismantled plants,
-                                    factories, wind turbines, bridges, vehicles and even stadiums. We have developed our
-                                    own methods based on in-house competences and provide a strong set-up for worldwide
-                                    shipments. <br>
-                                    We are also involved in tramp shipments of dry-bulk cargo and containers. </p>
-                                <p>Varamar offices are located in 9 countries — Germany, Italy, Athens, Ukraine, UAE,
-                                    Belgium, Canada, USA and China.</p>
-
-                                <p> We offer personalized approach, full package of services (document support, port
-                                    operations monitoring, engineers and supercargo counselling, etc.) and marketing
-                                    reporting / post-fix.
-                                </p>
-                            </div>
-
-                        </div>
-                        <div class="swiper-slide single-company">
-                            <div class="img">
-                                <img src="./img/sw1.jpg" alt="">
-                                <div class="log">
-                                    <img src="./img/logs1.svg" alt="">
+                                <div class="col2">
+                                    <ul>
+                                        <li><strong>9 offices</strong> around the world</li>
+                                        <li>more than <strong>50 agents</strong> around the world</li>
+                                        <li>more than <strong>300 vessels</strong> every year</li>
+                                        <li><strong>14 years</strong> on the market</li>
+                                        <li>more than <strong>30 shipments</strong> daily</li>
+                                    </ul>
                                 </div>
-                            </div>
-                            <div class="text">
-                                <span>Varamar</span>
-                                <p>Varamar is a shipping company established back in 2009 by Alexander Varvarenko. </p>
 
-                                <p>Varamar is well known as a carrier dealing with breakbulk, heavy & oversized, and
-                                    dry-bulk cargo.  <br>
-                                    For over a decade, we have developed transport solutions for dismantled plants,
-                                    factories, wind turbines, bridges, vehicles and even stadiums. We have developed our
-                                    own methods based on in-house competences and provide a strong set-up for worldwide
-                                    shipments. <br>
-                                    We are also involved in tramp shipments of dry-bulk cargo and containers. </p>
-                                <p>Varamar offices are located in 9 countries — Germany, Italy, Athens, Ukraine, UAE,
-                                    Belgium, Canada, USA and China.</p>
-
-                                <p> We offer personalized approach, full package of services (document support, port
-                                    operations monitoring, engineers and supercargo counselling, etc.) and marketing
-                                    reporting / post-fix.
-                                </p>
                             </div>
 
                         </div>
                     </div>
+                    <div class="item-tab">
+                        <div class="single-company">
+                            <div class="img">
+                                <img src="./img/sw1.jpg" alt="">
+                                <div class="log">
+                                    <img src="./img/logs1.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="text">
+                                <div class="col">
+                                    <span>Varamar</span>
+                                    <p>Varamar is a shipping company established back in 2009 by Alexander
+                                        Varvarenko. </p>
+
+                                    <p> Varamar is well known as a carrier dealing with breakbulk, heavy & oversized,
+                                        and
+                                        dry-bulk cargo. <br>
+                                        For over a decade, we have developed transport solutions for dismantled plants,
+                                        factories, wind turbines, bridges, vehicles and even stadiums. We have developed
+                                        our own methods based on in-house competences and provide a strong set-up for worldwide
+                                        shipments. <br></p>
+                                    <a href="">website</a>
+                                </div>
+                                <div class="col2">
+                                    <ul>
+                                        <li><strong>9 offices</strong> around the world</li>
+                                        <li>more than <strong>50 agents</strong> around the world</li>
+                                        <li><strong>14 years</strong> on the market</li>
+                                        <li>more than <strong>30 shipments</strong> daily</li>
+                                    </ul>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="item-tab">
+                        <div class="single-company">
+                            <div class="img">
+                                <img src="./img/sw1.jpg" alt="">
+                                <div class="log">
+                                    <img src="./img/logs1.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="text">
+                                <div class="col">
+                                    <span>Varamar</span>
+                                    <p>Varamar is a shipping company established back in 2009 by Alexander
+                                        Varvarenko. </p>
+
+                                    <p> Varamar is well known as a carrier dealing with breakbulk, heavy & oversized,
+                                        and
+                                        dry-bulk cargo. <br>
+                                        For over a decade, we have developed transport solutions for dismantled plants,
+                                        factories, wind turbines, bridges, vehicles and even stadiums. We have developed
+                                        our
+                                        own
+                                        methods based on in-house competences and provide a strong set-up for worldwide
+                                        shipments. <br>
+                                        We are also involved in tramp shipments of dry-bulk cargo and containers.</p>
+                                    <a href="">website</a>
+                                </div>
+                                <div class="col2">
+                                    <ul>
+                                        <li><strong>9 offices</strong> around the world</li>
+                                        <li>more than <strong>50 agents</strong> around the world</li>
+                                        <li>more than <strong>300 vessels</strong> every year</li>
+                                        <li><strong>14 years</strong> on the market</li>
+                                        <li>more than <strong>30 shipments</strong> daily</li>
+                                    </ul>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
                 </div>
-            </div>
-            <div class="dots">
+
 
             </div>
-            <div class="btns">
-                <div class="slider-btn slider-btn--prev">
-                    <img src="./img/arr-r.svg" alt="">
-                </div>
-                <div class="slider-btn slider-btn--next">
-                    <img src="./img/arr-r.svg" alt="">
-                </div>
-            </div>
+
         </div>
 
 
     </section>
     <section class="text-banner">
-        <p class="anim" data-anim-delay="0" data-anim-duration="660"
-           data-anim="anim-stage">Promoting sustainable growth is easy</p>
+        <p >Promoting sustainable growth is easy</p>
     </section>
     <section class="investors page-section" data-sec="3">
         <div class="container">
             <div class="investors-cont">
-                <div class="investors-head anim" data-anim-delay="0" data-anim-duration="960"
-                     data-anim="fade-up">
+                <div class="investors-head">
                     <div class="txt">
                         <span>Bluemont is always keen to increase its global market </span>
                         <h2>Investors</h2>
@@ -312,19 +336,15 @@
                         <img class="lazyload" data-src="./img/investor.jpg" alt="">
                     </div>
                     <div class="text counting-delay">
-                        <blockquote class="anim" data-anim-delay="0" data-anim-duration="960"
-                                    data-anim="anim-stage">
+                        <blockquote >
                             "We rely on strong relationships with our investors and lenders and continually seek to
                             create synergistic business opportunities, resulting in maximized shareholder value. <br>
                             Bluemont bases its strategy on seeing the world as one"
                         </blockquote>
-                        <p class="anim" data-anim-delay="0" data-anim-duration="960"
-                           data-anim="anim-stage">Alexander Varvarenko</p>
-                        <span class="anim" data-anim-delay="0" data-anim-duration="960"
-                              data-anim="anim-stage">owner of Bluemont</span>
+                        <p >Alexander Varvarenko</p>
+                        <span >founder of Bluemont</span>
 
-                        <a href="" class="btn anim btn-mod" data-mod="cont" data-anim-delay="0" data-anim-duration="960"
-                           data-anim="anim-stage">contact us</a>
+                        <a href="" class="btn btn-mod" data-mod="cont">contact us</a>
                     </div>
                 </div>
 
@@ -383,7 +403,7 @@
             +32 487 65 111 4</a>
         <a href="" class="mail">
             <div class="img"><img src="./img/mail-ic.svg" alt=""></div>
-            a.varvarenko@varamar.com</a>
+            info@bluemont.be</a>
         <div class="address">
             <div class="img">
                 <img src="./img/loc-ic.svg" alt="">
