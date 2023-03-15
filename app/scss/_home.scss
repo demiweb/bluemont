@@ -426,8 +426,8 @@
   position: relative;
 
   .text {
-    width: 39.6914vw;
-    margin-top: 14.1358vw;
+    width: 44.6914vw;
+    margin-top: 11.1358vw;
 
     display: flex;
     flex-direction: column;
@@ -478,7 +478,7 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    width: 45.3086vw;
+    width: 40.3086vw;
 
     span {
       font-style: normal;
@@ -496,7 +496,7 @@
       font-weight: 400;
       font-size: 3.9506vw;
       line-height: 110%;
-      text-transform: uppercase;
+      //text-transform: uppercase;
       color: #5496B1;
       position: relative;
       z-index: 2;
@@ -588,7 +588,7 @@
         font-weight: 400;
         font-size: 3.9506vw;
         line-height: 110%;
-        text-transform: uppercase;
+        //text-transform: uppercase;
         color: #5496B1;
 
       }
@@ -642,20 +642,34 @@
 
     font-style: normal;
     font-weight: 400;
-    font-size: 1.2346vw;
+    font-size: 1.0346vw;
     line-height: 110%;
     text-align: center;
     text-transform: uppercase;
     color: #5496B1;
     transition: all 0.3s ease;
+    .img {
+      margin-right: 1vw;
+      height: 3vw;
+      width: auto;
+      filter: invert(51%) sepia(74%) saturate(257%) hue-rotate(151deg) brightness(93%) contrast(93%);
+
+      img {
+        height: 100%;
+        width: auto;
+      }
+    }
 
     &.active {
       font-style: normal;
       font-weight: 400;
-      font-size: 1.9753vw;
+      font-size: 1.3753vw;
       line-height: 110%;
       color: #FFFFFF;
       background: #5496B1;
+      .img {
+        filter: none;
+      }
     }
   }
 }
@@ -964,7 +978,7 @@
       font-weight: 400;
       font-size: 3.9506vw;
       line-height: 110%;
-      text-transform: uppercase;
+      //text-transform: uppercase;
       color: #5496B1;
     }
   }
@@ -1001,8 +1015,8 @@
 
   .img {
     //background: #BCD4DE;
-    width: 32.7778vw;
-    height: 48.5185vw;
+    width: 26.7778vw;
+    height: 40.5185vw;
     margin-right: 8.7037vw;
     overflow: hidden;
     flex-shrink: 0;
@@ -1053,6 +1067,49 @@
 
     .btn {
       margin-top: 3.8272vw;
+      font-size: 1.8vw;
+      padding: 1.2vw 1.8vw;
+      width: auto;
+      background: #5496B1;
+      color: #fff;
+      &::after {
+        margin-left: 3vw;
+        filter: brightness(0) invert(1);
+        transition: filter 0.3s ease;
+      }
+      &:hover {
+        color: #5496B1;
+        background: #fff;
+        &::after {
+          filter: none;
+        }
+      }
+    }
+    a.mail, a.tel {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 0.9877vw;
+      line-height: 1.4815vw;
+      color: #1C3144;
+      text-decoration: underline;
+      margin-top: 0.7vw;
+      &::before {
+        width: 1vw;
+        height: 1vw;
+        background: url("../img/mail-ic.svg") no-repeat center / 100%;
+        display: inline-block;
+        content: '';
+        margin-right: 0.6vw;
+
+      }
+    }
+    a.tel {
+      &::before {
+        background: url("../img/arrow-little.svg") no-repeat center / 100%;
+      }
     }
   }
 }
@@ -1225,8 +1282,8 @@
     width: 15.4815vw;
   }
   .investors-conts .img {
-    width: 28.7778vw;
-    height: 42.5185vw;
+    width: 22.7778vw;
+    height: 34.5185vw;
   }
   .header-cont {
     width: 100%;
@@ -1258,7 +1315,7 @@
     font-size: 3.2vw;
   }
   .company__cont .text {
-    margin-top: 8vw;
+    margin-top: 5vw;
   }
   .company__cont .text p {
     font-size: 0.8vw;
@@ -1485,6 +1542,19 @@
 }
 
 @media screen and (max-width: 767px) {
+  .investors-conts .text .btn {
+    padding: 4vw 5vw;
+    font-size: 5vw;
+  }
+  .companies-head__tabs .tab-btn{
+    position: relative;
+    color: rgba(255, 255, 255, 0) !important;
+    .img {
+      position: absolute;
+      padding: 2.5vw;
+      height: 100%;
+    }
+  }
   //
   .companies-head__tabs {
     transform: translate(0, -13.8889vw);
@@ -2079,6 +2149,16 @@
     span {
       font-size: 3.3333vw;
       line-height: 1.2;
+    }
+    a.tel, a.mail {
+      font-size: 3.3333vw;
+      line-height: 1.2;
+      margin-top: 1.8vw;
+      &::before {
+        width: 3.4vw;
+        height: 3.4vw;
+        margin-right: 1.5vw;
+      }
     }
 
     .btn {
