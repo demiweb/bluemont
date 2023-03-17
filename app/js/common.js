@@ -259,7 +259,7 @@ function goToSectionProg() {
         progressBtns.forEach((btn) => {
             let numb = btn.dataset.prog;
             if (numb) {
-                let el = document.querySelector(`section[data-sec="${numb}"]`);
+                let el = document.querySelector(`[data-sec="${numb}"]`);
                 btn.addEventListener('click', (e) => {
                     e.preventDefault();
                     e.stopPropagation();

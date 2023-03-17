@@ -1164,118 +1164,131 @@
 
   align-items: stretch;
   justify-content: flex-start;
+  padding: 5.3704vw 0 6.7901vw
 
 }
-
-.footer-mask {
-  height: 12.2840vw;
-  width: 31.2963vw;
-  overflow: hidden;
-
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-}
-
 .footer-text {
-
-  border-left: 1px solid #BCD4DE;
-  border-right: 1px solid #BCD4DE;
-  height: auto;
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-direction: column;
-
-  a, > div {
-    flex-grow: 1;
-    display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 1.1111vw 3.5185vw 1.1111vw 2.0370vw;
-    border-bottom: 1px solid #BCD4DE;
-
-    &:last-child {
-      border-bottom: none;
-    }
-
-    .img {
-      width: 1.8519vw;
-      height: 1.8519vw;
-      margin-right: 1.8519vw;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-      }
-    }
-
-    &.tel {
-      font-style: normal;
-      font-weight: 700;
-      font-size: 1.4815vw;
-      line-height: 1.4815vw;
-      text-transform: uppercase;
-      color: #1C3144;
-    }
-
-    &.mail {
-      font-style: normal;
-      font-weight: 400;
-      font-size: 0.9877vw;
-      line-height: 1.4815vw;
-      text-decoration-line: underline;
-      text-transform: uppercase;
-      color: #5496B1;
-    }
-
-    &.address {
-      font-style: normal;
-      font-weight: 400;
-      font-size: 0.9877vw;
-      line-height: 1.4815vw;
-      text-transform: uppercase;
-      color: #1C3144;
-    }
-  }
-}
-
-.footer-copyr {
   flex-grow: 1;
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
-  padding: 1.8519vw;
-
-  .img {
-    width: 21.4815vw;
-    margin-bottom: 1.8519vw;
-    height: auto;
-    display: flex;
-
-    img {
-      width: 100%;
-      height: auto;
-    }
+  align-items: flex-start;
+  justify-content: flex-start;
+  span {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 3.9506vw;
+    line-height: 110%;
+    color: #5496B1;
   }
-
-  p {
+  p:not(.copyr) {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.4815vw;
+    line-height: 1.4815vw;
+    text-transform: uppercase;
+    color: #1C3144;
+    margin-top: 2.3827vw;
+    margin-bottom: 1.6667vw;
+  }
+  p.copyr {
     font-style: normal;
     font-weight: 400;
     font-size: 0.9877vw;
     line-height: 1.4815vw;
     text-transform: uppercase;
     color: #9DACB2;
+    margin-top: 2.5802vw;
+  }
+  .btn{
+    font-size: 1.8vw;
+    padding: 1.2vw 1.8vw;
+    width: auto;
+    background: #5496b1;
+    color: #fff;
+
+    &::after {
+      margin-left: 3vw;
+      -webkit-filter: brightness(0) invert(1);
+      filter: brightness(0) invert(1);
+      -webkit-transition: -webkit-filter .3s ease;
+      transition: -webkit-filter .3s ease;
+      -o-transition: filter .3s ease;
+      transition: filter .3s ease;
+      transition: filter .3s ease,-webkit-filter .3s ease;
+    }
+    &:hover {
+      color: #5496b1;
+      background: #fff;
+      &::after {
+        filter: none;
+      }
+    }
   }
 }
+
+.footer-info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-bottom: 2.1864vw;
+  a, .address {
+    border-top: 1px solid #BCD4DE;
+    padding: 1.0667vw  1.2667vw;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    .img {
+      height: 1.7519vw;
+      width: 1.7519vw;
+      margin-right: 1.7519vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+  .tel {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.3815vw;
+    line-height: 1.3815vw;
+    text-transform: uppercase;
+    color: #1C3144;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  .mail {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.9877vw;
+    line-height: 1.4815vw;
+    text-decoration-line: underline;
+    text-transform: uppercase;
+    color: #5496B1;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  .address {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.9877vw;
+    line-height: 1.4815vw;
+    text-transform: uppercase;
+    color: #1C3144;
+  }
+}
+
+
+
 
 @media screen and (max-width: 2400px) and (min-width: 1025px) {
   .header-cont .logo {
@@ -1311,7 +1324,7 @@
     padding-top: 2.4vw;
     padding-bottom: 2.4vw;
   }
-  .company__cont .left h2, .companies__head .container .left h2, .investors-head .txt h2 {
+  .company__cont .left h2, .companies__head .container .left h2, .investors-head .txt h2, .footer-text span {
     font-size: 3.2vw;
   }
   .company__cont .text {
@@ -1542,6 +1555,65 @@
 }
 
 @media screen and (max-width: 767px) {
+  .footer {
+    padding: 14vw 0 13vw;
+  }
+  .footer-text {
+    width: 100%;
+    span {
+      font-size: 7.2222vw;
+      line-height: 1.2;
+      margin-top: 0;
+      margin-bottom: 1.1111vw;
+    }
+    p:not(.copyr) {
+      font-size: 5vw;
+      line-height: 1.2;
+      margin-top: 5vw;
+      margin-bottom: 7vw;
+    }
+    p.copyr {
+      font-size: 3.3333vw;
+      line-height: 1.2;
+      margin-top: 8vw;
+      width: 100%;
+      text-align: center;
+    }
+    .btn {
+      width: 100%;
+    }
+  }
+  .footer-info {
+    margin-bottom: 6vw;
+
+    a, .address {
+      padding: 3vw;
+      .img {
+        width: 3.4vw;
+        height: 3.4vw;
+        margin-right: 3.4vw;
+        margin-bottom: 0;
+      }
+    }
+    a.tel {
+      font-size: 4vw;
+      line-height: 1.2;
+    }
+    a.mail {
+      font-size: 3.3333vw;
+      line-height: 1.2;
+    }
+    .address {
+      font-size: 3.3333vw;
+      line-height: 1.2;
+    }
+  }
+  .footer-text {
+    .btn {
+      padding: 4vw 5vw;
+      font-size: 5vw;
+    }
+  }
   .investors-conts .text .btn {
     padding: 4vw 5vw;
     font-size: 5vw;
@@ -1740,38 +1812,7 @@
   .hidden-header {
     margin-top: auto;
   }
-  .footer-text {
-    width: 100%;
-    border: none;
-    padding: 0;
-    gap: 0;
 
-    a, > div {
-      padding: 4.1667vw 0;
-
-      .img {
-        width: 6.1111vw;
-        height: 6.1111vw;
-        margin-right: 4.1667vw;
-        flex-shrink: 0;
-      }
-
-      &.tel {
-        font-size: 5.0000vw;
-        line-height: 1.2;
-      }
-
-      &.mail {
-        font-size: 4.4444vw;
-        line-height: 1.2;
-      }
-
-      &.address {
-        font-size: 4.4444vw;
-        line-height: 1.2;
-      }
-    }
-  }
 
   .header.active {
     .header-control {
@@ -2190,59 +2231,7 @@
   .hero {
     margin-top: 14.4444vw;
   }
-  .footer {
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    position: relative;
 
-    &:before {
-      width: 70vw;
-      height: 70vw;
-      top: 50%;
-      left: 50%;
-      display: inline-block;
-      content: '';
-      background: url("../img/log-vec.svg") no-repeat center / 100%;
-      transform: translate(-50%, -50%);
-      opacity: 0.6;
-      z-index: -1;
-      position: absolute;
-    }
 
-    .footer-text {
-      a, > div {
-        padding-left: 5.5556vw;
-        padding-right: 5.5556vw;
 
-        &:last-child {
-          border-bottom: 1px solid #bcd4de;
-        }
-      }
-    }
-  }
-  .footer-mask {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    border-bottom: 1px solid #bcd4de;
-    height: 39vw;
-    opacity: 0;
-    z-index: -1;
-  }
-  .footer-copyr {
-    order: 1;
-    width: 100%;
-    padding: 5.5556vw;
-
-    .img {
-      width: 50.0000vw;
-      margin-bottom: 4.1667vw;
-    }
-
-    p {
-      font-size: 3.8889vw;
-    }
-  }
 }
