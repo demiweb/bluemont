@@ -340,7 +340,7 @@ window.onscroll = function () {
 
 progressBarScrollFull();
 
-let homeBanner = [...document.querySelectorAll('.investors')];
+let homeBanner = [...document.querySelectorAll('.companies-list')];
 
 function startHomeBanner() {
     if (!homeBanner.length) {
@@ -350,6 +350,8 @@ function startHomeBanner() {
 
         homeBanner.forEach((sld) => {
             let sldCont = sld.querySelector('.swiper');
+            let sldNext = sld.querySelector('.slider-btn--next');
+            let sldPrev = sld.querySelector('.slider-btn--prev');
             let pagin = sld.querySelector('.dots');
 
             const swiper2 = new Swiper(sldCont, {
@@ -359,10 +361,11 @@ function startHomeBanner() {
                 slidesPerGroup: 1,
                 speed: 600,
                 centeredSlides: true,
-
-                autoplay: {
-                    delay: 3500,
+                navigation: {
+                    nextEl: sldNext,
+                    prevEl: sldPrev,
                 },
+                autoplay: false,
                 spaceBetween: 0,
 
                 pagination: {

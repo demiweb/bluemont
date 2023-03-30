@@ -1167,8 +1167,58 @@
   padding: 5.3704vw 0 6.7901vw
 
 }
+//
+.footer-row {
+  width: 100%;
+  display: flex;
+  gap: 4.1667vw;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.footer-col {
+  width: calc(50% - 2.0833vw);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.investors {
+  .swiper {
+    width: 100%;
+  }
+  .swiper-wrapper {
+    width: 100%;
+    align-items: stretch;
+
+  }
+}
+.dots {
+  margin-top: 2.0833vw;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8333vw;
+}
+.single-dot {
+  width: 2.0833vw;
+  height: 2.0833vw;
+  border-radius: 50%;
+  background: #5496b1;
+  cursor: pointer;
+  transform: scale(0.9);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  &.active {
+    background: #1c3144;
+    transform: scale(1);
+  }
+}
+
+//
 .footer-text {
   flex-grow: 1;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -1440,12 +1490,14 @@
   transition: transform 0.4s ease-out;
   transition-delay: 0s !important;
 
+
   .modal-close {
     width: 2.4691vw;
     height: 2.4691vw;
     position: absolute;
     top: 1.2346vw;
     right: 1.2346vw;
+    cursor: pointer;
 
     span {
       height: 2px;
@@ -1554,7 +1606,16 @@
   }
 }
 
+
 @media screen and (max-width: 767px) {
+  .footer-row {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .footer-col {
+    width: 100%;
+  }
   .footer {
     padding: 14vw 0 13vw;
   }
@@ -2019,21 +2080,16 @@
     padding: 2.7778vw;
     gap: 2.7778vw;
     width: 100%;
+    margin-top: 3vw;
   }
   .single-dot {
-    width: 2.7778vw;
-    height: 2.7778vw;
+    width: 5vw;
+    height: 5vw;
+    padding: 0;
     border-radius: 50%;
     transition: all 0.2s ease-out;
-    background: #bcd4de;
-    opacity: 0.7;
-
-    &.active {
-      width: 4.1667vw;
-      height: 4.1667vw;
-      background: #fff;
-      opacity: 1;
-    }
+    transform: scale(1);
+    flex-shrink: 0;
   }
   .text-banner {
     padding: 5vw 2vw;
